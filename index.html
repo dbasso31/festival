@@ -33,7 +33,7 @@ body{ font-family:"Muoto",sans-serif; }
   pointer-events:none;
   --k:calc(100cqw / 1170);          /* 1 px du visuel d'origine (1170 de large) */
 }
-.poster > *{ position:absolute; }
+.poster > *{ position:absolute; translate:calc(-7.5*var(--k)) calc(-17.65*var(--k)); } /* recentre le contenu dans la page */
 .poster .lines{ left:0; top:0; width:100%; height:100%; overflow:visible; }
 .poster .lines line{ stroke:var(--red); stroke-width:3; shape-rendering:geometricPrecision; }
 .poster .logo{ left:calc(92*var(--k)); top:calc(855*var(--k)); width:calc(218.4*var(--k)); height:auto; }
@@ -48,8 +48,8 @@ body{ font-family:"Muoto",sans-serif; }
 .title{ left:calc(458*var(--k)); top:calc(236*var(--k)); }
 .pres { left:calc(458*var(--k)); top:calc(651.6*var(--k)); }
 .info { left:calc(458*var(--k)); top:calc(847.3*var(--k)); }
-.doors{ left:calc(458*var(--k)); top:calc(1202.9*var(--k)); }
-.presales{ left:calc(458*var(--k)); top:calc(1244.6*var(--k)); }
+.doors{ left:calc(458*var(--k)); top:calc(1223.6*var(--k)); }
+.presales{ left:calc(458*var(--k)); top:calc(1285.9*var(--k)); }
 .arrow{ display:inline-block; width:1.1em; height:.72em; margin-left:.2em; overflow:visible; vertical-align:baseline; fill:none; stroke:currentColor; stroke-width:9.19; stroke-linecap:butt; stroke-linejoin:miter; }
 </style>
 </head>
@@ -68,8 +68,8 @@ body{ font-family:"Muoto",sans-serif; }
     <line x1="92"  y1="122"  x2="1093" y2="122"/>
     <line x1="92"  y1="738"  x2="410"  y2="738"/>
     <line x1="458" y1="738"  x2="1093" y2="738"/>
-    <line x1="92"  y1="1432" x2="410"  y2="1432"/>
-    <line x1="458" y1="1432" x2="1093" y2="1432"/>
+    <line x1="92"  y1="1473.3" x2="410"  y2="1473.3"/>
+    <line x1="458" y1="1473.3" x2="1093" y2="1473.3"/>
   </svg>
 
   <svg class="logo" role="img" aria-label="Contrebande.s" viewBox="0 0 129 115" fill="none" xmlns="http://www.w3.org/2000/svg">
