@@ -50,7 +50,7 @@ body{ font-family:"Muoto",sans-serif; }
 .info { left:calc(458*var(--k)); top:calc(847.3*var(--k)); }
 .doors{ left:calc(458*var(--k)); top:calc(1223.6*var(--k)); }
 .presales{ left:calc(458*var(--k)); top:calc(1285.9*var(--k)); }
-.arrow{ display:inline-block; width:1.1em; height:.72em; margin-left:.2em; overflow:visible; vertical-align:baseline; fill:none; stroke:currentColor; stroke-width:9.19; stroke-linecap:butt; stroke-linejoin:miter; }
+.arrow{ display:inline-block; width:1.1em; height:.72em; margin-left:.2em; overflow:visible; vertical-align:baseline; fill:none; stroke:currentColor; stroke-width:9.19; stroke-linecap:butt; stroke-linejoin:miter; transform:translateX(var(--ax,0em)); will-change:transform; }
 </style>
 </head>
 <body>
@@ -108,5 +108,19 @@ de la Villette</p>
   <p class="t mid presales">Préventes<svg class="arrow" viewBox="0 0 110 72" aria-hidden="true"><path d="M0 36H100M66 4.6L100 36L66 67.4"/></svg></p>
 </div>
 
+<script>
+/* La flèche de « Préventes » glisse vers la droite puis revient au fil du scroll */
+(function(){
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var el = document.querySelector(".arrow"), ticking = false;
+  function update(){
+    var x = (1 - Math.cos(window.scrollY / 160)) / 2 * 0.4;   // 0 → 0.4em → 0
+    el.style.setProperty("--ax", x.toFixed(3) + "em");
+    ticking = false;
+  }
+  addEventListener("scroll", function(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
+  update();
+})();
+</script>
 </body>
 </html>
