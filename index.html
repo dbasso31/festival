@@ -35,14 +35,14 @@ main{ width:min(100%, calc(100vh * 4 / 3)); width:min(100%, calc(100svh * 4 / 3)
   pointer-events:none;
   --k:calc(100cqw / 1170);          /* 1 px du visuel d'origine (1170 de large) */
 }
-.poster > *{ position:absolute; translate:calc(-7.5*var(--k)) calc(-17.65*var(--k)); } /* recentre le contenu dans la page */
+.poster > *{ position:absolute; translate:calc(-7.5*var(--k)) calc(31.02*var(--k)); } /* recentre le contenu dans la page */
 .poster .lines{ left:0; top:0; width:100%; height:100%; overflow:visible; }
 .poster .lines line{ stroke:var(--red); stroke-width:3; shape-rendering:geometricPrecision; }
 .poster .logo{ left:calc(92*var(--k)); top:calc(855*var(--k)); width:calc(218.4*var(--k)); height:auto; }
 
 .t{ text-transform:uppercase; white-space:pre; }
 .big{ font-size:calc(146.4*var(--k)); line-height:calc(129.6*var(--k)); font-variation-settings:"wdth" 80,"wght" 600; letter-spacing:-.03em; }
-.mid{ font-size:calc(74.4*var(--k));  line-height:calc(69.03*var(--k));  font-variation-settings:"wdth" 80,"wght" 600; letter-spacing:0; }
+.mid{ font-size:calc(74.4*var(--k));  line-height:calc(69.03*var(--k));  font-variation-settings:"wdth" 80,"wght" 600; letter-spacing:-.01em; }
 .sml{ font-size:calc(34.56*var(--k)); line-height:calc(31.1*var(--k));  font-variation-settings:"wdth" 75,"wght" 700; letter-spacing:.02em; }
 
 .dates{ left:calc(92*var(--k));  top:calc(236*var(--k)); }
@@ -50,8 +50,8 @@ main{ width:min(100%, calc(100vh * 4 / 3)); width:min(100%, calc(100svh * 4 / 3)
 .title{ left:calc(458*var(--k)); top:calc(236*var(--k)); }
 .pres { left:calc(458*var(--k)); top:calc(651.6*var(--k)); }
 .info { left:calc(458*var(--k)); top:calc(847.3*var(--k)); }
-.doors{ left:calc(458*var(--k)); top:calc(1223.6*var(--k)); }
-.presales{ left:calc(458*var(--k)); top:calc(1285.9*var(--k)); }
+.doors{ left:calc(458*var(--k)); top:calc(1085.55*var(--k)); }
+.presales{ left:calc(458*var(--k)); top:calc(1176.11*var(--k)); }
 .arrow{ display:inline-block; width:1.1em; height:.72em; margin-left:.2em; overflow:visible; vertical-align:baseline; fill:none; stroke:currentColor; stroke-width:9.19; stroke-linecap:butt; stroke-linejoin:miter; transform:translateX(var(--ax,0em)); will-change:transform; }
 </style>
 </head>
@@ -70,8 +70,8 @@ main{ width:min(100%, calc(100vh * 4 / 3)); width:min(100%, calc(100svh * 4 / 3)
     <line x1="92"  y1="122"  x2="1093" y2="122"/>
     <line x1="92"  y1="738"  x2="410"  y2="738"/>
     <line x1="458" y1="738"  x2="1093" y2="738"/>
-    <line x1="92"  y1="1473.3" x2="410"  y2="1473.3"/>
-    <line x1="458" y1="1473.3" x2="1093" y2="1473.3"/>
+    <line x1="92"  y1="1375.95" x2="410"  y2="1375.95"/>
+    <line x1="458" y1="1375.95" x2="1093" y2="1375.95"/>
   </svg>
 
   <svg class="logo" role="img" aria-label="Contrebande.s, TSF Jazz" viewBox="0 0 301 527" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -129,10 +129,8 @@ Festival</h1>
 
   <p class="t mid info">3 jours
 35 musicien.ne.s
-Revox recorded
-Petite Halle
-de la Villette</p>
-  <p class="t sml doors">20:30 - 00:00</p>
+La Petite Halle</p>
+  <p class="t sml doors">211 avenue Jean Jaurès</p>
   <p class="t mid presales">Préventes<svg class="arrow" viewBox="0 0 110 72" aria-hidden="true"><path d="M0 36H100M66 4.6L100 36L66 67.4"/></svg></p>
 </div>
 
